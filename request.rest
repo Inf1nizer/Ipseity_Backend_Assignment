@@ -1,0 +1,42 @@
+GET http://localhost:3000/backend/ticket/all
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTExNDY5MzB9.hhqCsv2q2r4Wm7J6ozIEH6Ee7fqV2aG3H99nLTzr6aE
+###
+
+POST http://localhost:3000/backend/ticket/new
+Content-Type: application/json
+
+{
+    "title": "Description",
+    "assTo": "Test2",
+    "sttus": "Close"
+}
+
+###
+
+//GET http://localhost:3000/backend/ticket?title=Description
+
+###
+
+POST http://localhost:3000/backend/users
+Content-Type: application/json
+
+{
+    "name": "Test",
+    "role": "emp"
+}
+
+###
+
+POST http://localhost:3000/backend/users/login
+Content-Type: application/json
+
+{
+    "name": "Test",
+    "role": "emp"
+}
+
+###
+
+DELETE http://localhost:3000/backend/ticket/delete/64ccdb0bdedc0d2adfc8711e
+
+###
